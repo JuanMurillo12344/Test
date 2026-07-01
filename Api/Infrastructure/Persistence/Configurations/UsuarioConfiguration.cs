@@ -11,6 +11,8 @@ public sealed class UsuarioConfiguration : IEntityTypeConfiguration<Usuario>
         builder.ToTable("Usuarios");
         builder.HasKey(usuario => usuario.Id);
 
+        builder.HasQueryFilter(usuario => !usuario.IsDeleted);
+
         builder.Property(usuario => usuario.Nombre)
             .IsRequired()
             .HasMaxLength(100);
@@ -22,5 +24,10 @@ public sealed class UsuarioConfiguration : IEntityTypeConfiguration<Usuario>
         builder.Property(usuario => usuario.Email)
             .IsRequired()
             .HasMaxLength(150);
+
+        builder.Property(usuario => usuario.IsDeleted)
+            .IsRequired();
+
+        builder.Property(usuario => usuario.DeletedAt);
     }
 }
