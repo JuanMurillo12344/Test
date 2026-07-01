@@ -11,14 +11,14 @@ public sealed class UsuariosController(
     ICreateUsuarioCommandHandler createUsuarioCommandHandler) : ControllerBase
 {
     [HttpGet]
-    public async Task<ActionResult<IReadOnlyList<Api.Application.Usuarios.UsuarioResponse>>> Get(CancellationToken cancellationToken)
+    public async Task<ActionResult<IReadOnlyList<UsuarioListItemResponse>>> Get(CancellationToken cancellationToken)
     {
         var usuarios = await getUsuariosQueryHandler.HandleAsync(new GetUsuariosQuery(), cancellationToken);
         return Ok(usuarios);
     }
 
     [HttpPost]
-    public async Task<ActionResult<Api.Application.Usuarios.UsuarioResponse>> Post(
+    public async Task<ActionResult<CreateUsuarioResponse>> Post(
         [FromBody] CreateUsuarioCommand command,
         CancellationToken cancellationToken)
     {
