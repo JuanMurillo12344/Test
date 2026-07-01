@@ -1,5 +1,6 @@
 using Api.Application.Usuarios.Create;
 using Api.Application.Usuarios.List;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Controllers;
@@ -7,13 +8,14 @@ namespace Api.Controllers;
 [ApiController]
 [Route("api/usuarios")]
 public sealed class UsuariosController(
-    IGetUsuariosQueryHandler getUsuariosQueryHandler,
-    ICreateUsuarioCommandHandler createUsuarioCommandHandler) : ControllerBase
+    IMediator mediator) : ControllerBase
 {
     [HttpGet]
-    public async Task<ActionResult<IReadOnlyList<UsuarioListItemResponse>>> Get(CancellationToken cancellationToken)
+    public async Task<ActionResult<PagedUsuariosResponse>> Get(
+        [FromQuery] GetUsuariosQuery query,
+        CancellationToken cancellationToken)
     {
-        var usuarios = await getUsuariosQueryHandler.HandleAsync(new GetUsuariosQuery(), cancellationToken);
+        var usuarios = await mediator.Send(query, cancellationToken);
         return Ok(usuarios);
     }
 
@@ -22,7 +24,7 @@ public sealed class UsuariosController(
         [FromBody] CreateUsuarioCommand command,
         CancellationToken cancellationToken)
     {
-        var usuario = await createUsuarioCommandHandler.HandleAsync(command, cancellationToken);
+        var usuario = await mediator.Send(command, cancellationToken);
         return Ok(usuario);
     }
 }

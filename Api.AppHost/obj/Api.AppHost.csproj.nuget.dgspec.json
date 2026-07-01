@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Juan\\Desktop\\Nueva carpeta\\Api.AppHost\\Api.AppHost.csproj": {}
+    "c:\\Users\\Juan\\Desktop\\Nueva carpeta\\Api.AppHost\\Api.AppHost.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Juan\\Desktop\\Nueva carpeta\\Api.AppHost\\Api.AppHost.csproj": {
+    "c:\\Users\\Juan\\Desktop\\Nueva carpeta\\Api.AppHost\\Api.AppHost.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Juan\\Desktop\\Nueva carpeta\\Api.AppHost\\Api.AppHost.csproj",
+        "projectUniqueName": "c:\\Users\\Juan\\Desktop\\Nueva carpeta\\Api.AppHost\\Api.AppHost.csproj",
         "projectName": "Api.AppHost",
-        "projectPath": "C:\\Users\\Juan\\Desktop\\Nueva carpeta\\Api.AppHost\\Api.AppHost.csproj",
+        "projectPath": "c:\\Users\\Juan\\Desktop\\Nueva carpeta\\Api.AppHost\\Api.AppHost.csproj",
         "packagesPath": "C:\\Users\\Juan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Juan\\Desktop\\Nueva carpeta\\Api.AppHost\\obj\\",
+        "outputPath": "c:\\Users\\Juan\\Desktop\\Nueva carpeta\\Api.AppHost\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Juan\\Desktop\\Nueva carpeta\\NuGet.Config",
+          "c:\\Users\\Juan\\Desktop\\Nueva carpeta\\NuGet.Config",
           "C:\\Users\\Juan\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [

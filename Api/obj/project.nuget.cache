@@ -1,12 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "bKwPBWL1F7U=",
+  "dgSpecHash": "uLTsMaK19pU=",
   "success": true,
-  "projectFilePath": "c:\\Users\\Juan\\Desktop\\Nueva carpeta\\Api\\Api.csproj",
+  "projectFilePath": "C:\\Users\\Juan\\Desktop\\Nueva carpeta\\Api\\Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Juan\\.nuget\\packages\\azure.core\\1.47.1\\azure.core.1.47.1.nupkg.sha512",
     "C:\\Users\\Juan\\.nuget\\packages\\azure.identity\\1.14.2\\azure.identity.1.14.2.nupkg.sha512",
     "C:\\Users\\Juan\\.nuget\\packages\\bogus\\35.6.1\\bogus.35.6.1.nupkg.sha512",
+    "C:\\Users\\Juan\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",
+    "C:\\Users\\Juan\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
+    "C:\\Users\\Juan\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.1.0\\mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512",
     "C:\\Users\\Juan\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.8\\microsoft.aspnetcore.openapi.10.0.8.nupkg.sha512",
     "C:\\Users\\Juan\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\8.0.0\\microsoft.bcl.asyncinterfaces.8.0.0.nupkg.sha512",
     "C:\\Users\\Juan\\.nuget\\packages\\microsoft.bcl.cryptography\\9.0.4\\microsoft.bcl.cryptography.9.0.4.nupkg.sha512",
@@ -39,9 +42,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "El paquete \"Microsoft.OpenApi\" 2.0.0 tiene una vulnerabilidad de gravedad alta conocida, https://github.com/advisories/GHSA-v5pm-xwqc-g5wc",
-      "projectPath": "c:\\Users\\Juan\\Desktop\\Nueva carpeta\\Api\\Api.csproj",
+      "projectPath": "C:\\Users\\Juan\\Desktop\\Nueva carpeta\\Api\\Api.csproj",
       "warningLevel": 1,
-      "filePath": "c:\\Users\\Juan\\Desktop\\Nueva carpeta\\Api\\Api.csproj",
+      "filePath": "C:\\Users\\Juan\\Desktop\\Nueva carpeta\\Api\\Api.csproj",
       "libraryId": "Microsoft.OpenApi",
       "targetGraphs": [
         "net10.0"

@@ -1,6 +1,5 @@
 using Api.Domain.Usuarios;
 using Api.Infrastructure.Persistence;
-using Api.Infrastructure.Persistence.Repositories;
 using Api.Infrastructure.Seeding;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -16,7 +15,6 @@ public static class DependencyInjection
             ?? throw new InvalidOperationException("No se encontró la cadena de conexión 'bd'.");
 
         services.AddDbContext<ApiDbContext>(options => options.UseSqlServer(connectionString));
-        services.AddScoped<IUsuarioRepository, UsuarioRepository>();
         services.AddHostedService<UsuarioSeederHostedService>();
 
         return services;

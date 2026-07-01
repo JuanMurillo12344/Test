@@ -15,15 +15,15 @@ using System.Reflection;
     "cp.exe"))]
 [assembly: System.Reflection.AssemblyMetadata("dcpextensionpaths", ("C:\\Users\\Juan\\.nuget\\packages\\aspire.hosting.orchestration.win-x64\\13.4.6\\tools\\e" +
     "xt\\"))]
-[assembly: System.Reflection.AssemblyMetadata("apphostprojectpath", "C:\\Users\\Juan\\Desktop\\Nueva carpeta\\Api.AppHost")]
+[assembly: System.Reflection.AssemblyMetadata("apphostprojectpath", "c:\\Users\\Juan\\Desktop\\Nueva carpeta\\Api.AppHost")]
 [assembly: System.Reflection.AssemblyMetadata("apphostprojectname", "Api.AppHost.csproj")]
 [assembly: System.Reflection.AssemblyMetadata("aspiredashboardpath", ("C:\\Users\\Juan\\.nuget\\packages\\aspire.dashboard.sdk.win-x64\\13.4.6\\tools\\Aspire.Da" +
     "shboard.exe"))]
-[assembly: System.Reflection.AssemblyMetadataAttribute("apphostprojectbaseintermediateoutputpath", "C:\\Users\\Juan\\Desktop\\Nueva carpeta\\Api.AppHost\\obj\\")]
+[assembly: System.Reflection.AssemblyMetadataAttribute("apphostprojectbaseintermediateoutputpath", "c:\\Users\\Juan\\Desktop\\Nueva carpeta\\Api.AppHost\\obj\\")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("Api.AppHost")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dfab1e52bdf6d00b602b72ceb930e0e981320449")]
 [assembly: System.Reflection.AssemblyProductAttribute("Api.AppHost")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Api.AppHost")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

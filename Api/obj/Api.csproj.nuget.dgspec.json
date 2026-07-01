@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Juan\\Desktop\\Nueva carpeta\\Api\\Api.csproj": {}
+    "C:\\Users\\Juan\\Desktop\\Nueva carpeta\\Api\\Api.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Juan\\Desktop\\Nueva carpeta\\Api\\Api.csproj": {
+    "C:\\Users\\Juan\\Desktop\\Nueva carpeta\\Api\\Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Juan\\Desktop\\Nueva carpeta\\Api\\Api.csproj",
+        "projectUniqueName": "C:\\Users\\Juan\\Desktop\\Nueva carpeta\\Api\\Api.csproj",
         "projectName": "Api",
-        "projectPath": "c:\\Users\\Juan\\Desktop\\Nueva carpeta\\Api\\Api.csproj",
+        "projectPath": "C:\\Users\\Juan\\Desktop\\Nueva carpeta\\Api\\Api.csproj",
         "packagesPath": "C:\\Users\\Juan\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Juan\\Desktop\\Nueva carpeta\\Api\\obj\\",
+        "outputPath": "C:\\Users\\Juan\\Desktop\\Nueva carpeta\\Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "c:\\Users\\Juan\\Desktop\\Nueva carpeta\\NuGet.Config",
+          "C:\\Users\\Juan\\Desktop\\Nueva carpeta\\NuGet.Config",
           "C:\\Users\\Juan\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
@@ -50,6 +50,10 @@
             "Bogus": {
               "target": "Package",
               "version": "[35.6.1, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.1.0, )"
             },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",

@@ -1,16 +1,14 @@
 using Api.Domain.Usuarios;
+using MediatR;
+using Api.Infrastructure.Persistence;
+using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations;
 
 namespace Api.Application.Usuarios.Create;
 
-public sealed record CreateUsuarioCommand(string Nombre, string Apellido, string Email);
+public sealed record CreateUsuarioCommand(string Nombre, string Apellido, string Email) : IRequest<CreateUsuarioResponse>;
 
 public sealed record CreateUsuarioResponse(Guid Id, string Nombre, string Apellido, string Email);
-
-public interface ICreateUsuarioCommandHandler
-{
-    Task<CreateUsuarioResponse> HandleAsync(CreateUsuarioCommand command, CancellationToken cancellationToken = default);
-}
 
 public static class CreateUsuarioValidator
 {
@@ -43,15 +41,16 @@ public static class CreateUsuarioMapping
     }
 }
 
-public sealed class CreateUsuarioCommandHandler(IUsuarioRepository usuarioRepository) : ICreateUsuarioCommandHandler
+public sealed class CreateUsuarioCommandHandler(ApiDbContext dbContext) : IRequestHandler<CreateUsuarioCommand, CreateUsuarioResponse>
 {
-    public async Task<CreateUsuarioResponse> HandleAsync(CreateUsuarioCommand command, CancellationToken cancellationToken = default)
+    public async Task<CreateUsuarioResponse> Handle(CreateUsuarioCommand command, CancellationToken cancellationToken)
     {
         CreateUsuarioValidator.Validate(command);
 
         var usuario = new Usuario(Guid.NewGuid(), command.Nombre, command.Apellido, command.Email);
 
-        await usuarioRepository.AddAsync(usuario, cancellationToken);
+        await dbContext.Usuarios.AddAsync(usuario, cancellationToken);
+        await dbContext.SaveChangesAsync(cancellationToken);
 
         return usuario.ToResponse();
     }

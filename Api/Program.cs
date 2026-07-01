@@ -1,3 +1,4 @@
+using System.ComponentModel.DataAnnotations;
 using Api.Application;
 using Api.Infrastructure;
 
@@ -13,6 +14,19 @@ builder.Services.AddInfrastructure(builder.Configuration);
 
 var app = builder.Build();
 
+app.Use(async (context, next) =>
+{
+    try
+    {
+        await next();
+    }
+    catch (ValidationException exception)
+    {
+        context.Response.StatusCode = StatusCodes.Status400BadRequest;
+        await context.Response.WriteAsJsonAsync(new { error = exception.Message });
+    }
+});
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -26,3 +40,5 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+public partial class Program;
