@@ -4,11 +4,11 @@ public class Usuario
 {
     public Guid Id { get; private set; }
 
-    public string Nombre { get; private set; }
+    public string Nombre { get; private set; } = string.Empty;
 
-    public string Apellido { get; private set; }
+    public string Apellido { get; private set; } = string.Empty;
 
-    public string Email { get; private set; }
+    public string Email { get; private set; } = string.Empty;
 
     public Usuario(Guid id, string nombre, string apellido, string email)
     {
